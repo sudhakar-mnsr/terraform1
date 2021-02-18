@@ -17,6 +17,7 @@ resource "aws_s3_bucket" "my_bucket" {
       enabled = true
 
       noncurrent_version_transition {
+        days = 30
         storage_class = "STANDARD_IA"
       }
    }
