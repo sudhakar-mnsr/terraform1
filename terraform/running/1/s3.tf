@@ -23,4 +23,5 @@ resource "aws_s3_bucket_object" "readme_file" {
    key = "files/readme.txt"
 
    source = "readme.txt"
+   etag = filemd5("readme.txt")
 }
