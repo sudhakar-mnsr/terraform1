@@ -12,6 +12,15 @@ resource "aws_s3_bucket" "my_bucket" {
       enabled = true
    }
 
+   lifecycle_rule {
+      prefix = "files/"
+      enabled = true
+
+      noncurrent_version_transition {
+        storage_class = "STANDARD_IA"
+      }
+   }
+
    tags = {
       Type="LOG"
       Tier="STANDARD"
