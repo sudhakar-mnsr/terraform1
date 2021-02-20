@@ -3,7 +3,7 @@ output "vpc_id" {
 }
 
 output "vpc_cidr" {
-   value = aws_vpc.module.cidr_block
+   value = aws_vpc.module.vpc_cidr_block
 }
 
 output "public_subnet_cidr" {
