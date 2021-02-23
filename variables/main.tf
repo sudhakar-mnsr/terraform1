@@ -109,6 +109,7 @@ module "ec2_instances" {
    source = "./modules/aws-instance"
 
    instance_count = 2
+   instance_type = "t2.micro"
    subnet_ids = module.vpc.private_subnets[*]
    security_group_ids = [module.app_security_group.this_security_group_id]
 
